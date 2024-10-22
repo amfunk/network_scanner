@@ -18,7 +18,7 @@ void blinkLed ()
 int main ()
 {
   stdio_init_all();
-  lwip_nosys_init();
+  //lwip_nosys_init();
 
   if (cyw43_arch_init())
   {
@@ -36,7 +36,7 @@ int main ()
     multicore_launch_core1(blinkLed);
   }
 
-#if 1
+#if 0
   // Send ICMP packets here
   struct pbuf *packet = pbuf_alloc(PBUF_IP, 74, PBUF_RAM);
   //cyw43_cb_tcpip_init(&cyw43_state, CYW43_ITF_STA); // Not sure if I need this after cyw43_arch_init()
